@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.0"
+	client="site">
+	<name>Google Chart Module</name>
+	<author>Lukman Hussein</author>
+	<creationDate>December 2012</creationDate>
+	<copyright>Copyright  Lukman Hussein. All rights reserved.</copyright>
+	<license>GNU General Public License version 3 </license>
+	<authorEmail>lukmanism@gmail.com</authorEmail>
+	<authorUrl>www.ntahla.com</authorUrl>
+	<version>1.5</version>
+	<description>SPREADSHEETSMODULE</description>
+    <languages>
+    	<language tag="en-GB">language/en-GB/en-GB.mod_gchart.ini</language>
+    </languages>
+
+	<files>
+		<filename module="mod_gchart">mod_gchart.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<folder>js</folder>
+		<folder>sample</folder>
+		<filename>mod_gchart.xml</filename>
+	</files>
+
+		<config> 
+			<fields name="params">
+
+			<fieldset name="SETTING" label="Setting">
+		        <field name="title" type="text" default="" label="Title" description="Chart Title"></field>
+		        <field name="width" type="text" default="600" label="Width" description="Chart Width"></field>
+		        <field name="height" type="text" default="350" label="Height" description="Chart Height"></field>
+		        <field name="chart_id" type="text" default="sof" label="Chart ID" description="Chart HTML Container ID"></field>
+			</fieldset>
+
+
+			<fieldset name="ANNOTATEDTIMELINE" label="Annotated Timeline">
+		        <field name="keyid" type="text" default="0An9EMa5Y6wiXdFdOZXdScTZsN0RWSVFZUXBDU2wzTkE" label="Spreadsheets Key ID" description="Google Spreadsheet Key ID"></field>
+			</fieldset>
+
+			<fieldset name="ANNOTATEDTIMELINE2" label="Annotated Timeline (SVG)">
+		        <field name="CSVPATH" type="text" default="modules/mod_gchart/sample/SOF.csv" label="Path to CSV" description="Path must be raltive to website directory i.e. modules/mod_gchart/sample/SOF.csv"></field>
+		        <field name="Y_LABEL" type="text" default="" label="Y-Axis Label" description=""></field>
+		        <field name="xAxisHeight" type="text" default="14" label="X-Axis Height" description=""></field>
+		        <field name="showRangeSelector" type="list" default="true" label="Show Range Selector" description="">
+					<option
+						value="true">True</option>
+					<option
+						value="false">False</option>
+		        <field name="rangeSelectorHeight" type="text" default="30" label="Range Selector Height" description=""></field>
+		        </field>
+		        <field name="showRoller" type="list" default="true" label="Show Rollers" description="">
+					<option
+						value="true">True</option>
+					<option
+						value="false">False</option>
+		        </field>
+		        <field name="rollPeriod" type="text" default="14" label="Roll Period" description=""></field>
+			</fieldset>
+
+
+
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
+
